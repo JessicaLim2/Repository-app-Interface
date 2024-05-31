@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SecurityValueHelpOf', 
+    typeNamePlural: 'SecurityValueHelpOfs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Security value help of repository app', 
+      value: 'Security'
+    }
+  }
+}
+annotate view ZC_SecurityValueHelpOf with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Security'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Security'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_SecurityValueHelpOf', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Security value help of repository app', 
+    position: 1 
+  } ]
+  Security;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

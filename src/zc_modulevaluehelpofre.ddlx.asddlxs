@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ModuleValueHelpOfRe', 
+    typeNamePlural: 'ModuleValueHelpOfRes', 
+    title: {
+      type: #STANDARD, 
+      label: 'Module value help of repository app', 
+      value: 'ModuleName'
+    }
+  }
+}
+annotate view ZC_ModuleValueHelpOfRe with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'ModuleName'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'ModuleName'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_ModuleValueHelpOfRe', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Module value help of repository app', 
+    position: 1 
+  } ]
+  ModuleName;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

@@ -1,0 +1,63 @@
+managed with additional save implementation in class ZBP_I_SYSTEMVALUEHELPOFRE_S unique;
+strict;
+with draft;
+
+define behavior for ZI_SystemValueHelpOfRe_S alias SystemValueHelpOAll
+draft table ZDT_SYSTEM_R_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _SystemValueHelpOfRe { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_SystemValueHelpOfRe alias SystemValueHelpOfRe
+persistent table ZDT_SYSTEM_REP
+draft table ZDT_SYSTEM_REP_D
+etag master LocalLastChangedAt
+lock dependent by _SystemValueHelpOAll
+authorization dependent by _SystemValueHelpOAll
+
+{
+  field ( mandatory : create )
+   Syst;
+
+  field ( readonly )
+   SingletonID,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Syst;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_SYSTEM_REP
+  {
+    Syst = SYST;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _SystemValueHelpOAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

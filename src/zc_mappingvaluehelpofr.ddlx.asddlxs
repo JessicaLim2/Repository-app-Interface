@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'MappingValueHelpOfR', 
+    typeNamePlural: 'MappingValueHelpOfRs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Mapping value help of repository app', 
+      value: 'Mapping'
+    }
+  }
+}
+annotate view ZC_MappingValueHelpOfR with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Mapping'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Mapping'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_MappingValueHelpOfR', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Mapping value help of repository app', 
+    position: 1 
+  } ]
+  Mapping;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

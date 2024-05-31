@@ -1,0 +1,43 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'CommunicationValAll'
+  }
+}
+annotate view ZC_CommunicationValueH_S with
+{
+  @UI.facet: [ {
+    id: 'Transport', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Transport', 
+    position: 1 , 
+    hidden: #(HideTransport)
+  }, 
+  {
+    id: 'ZI_CommunicationValueH', 
+    purpose: #STANDARD, 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Communication value help of repository a', 
+    position: 2 , 
+    targetElement: '_CommunicationValueH'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  SingletonID;
+  
+  @UI.hidden: true
+  HideTransport;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    importance: #HIGH
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'SelectCustomizingTransptReq', 
+    label: 'Select Transport'
+  } ]
+  TransportRequestID;
+}

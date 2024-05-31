@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationDomainVa', 
+    typeNamePlural: 'IntegrationDomainVas', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration domain value help of reposit', 
+      value: 'IntegrationDom'
+    }
+  }
+}
+annotate view ZC_IntegrationDomainVa with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'IntegrationDom'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'IntegrationDom'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_IntegrationDomainVa', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Integration domain value help of reposit', 
+    position: 1 
+  } ]
+  IntegrationDom;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

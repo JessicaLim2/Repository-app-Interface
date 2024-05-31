@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table maintenance for module of repository app",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_MODULEVALUEHELPOFRE_O4",
+    "serviceName": "ZUI_MODULEVALUEHELPOFRE_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "ModuleValueHelpOAll",
+    "name": "Module value help of repository app",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "ModuleValueHelpOAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "ModuleValueHelpOfRe",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

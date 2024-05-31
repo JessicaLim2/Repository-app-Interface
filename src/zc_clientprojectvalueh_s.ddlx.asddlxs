@@ -1,0 +1,43 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ClientProjectValAll'
+  }
+}
+annotate view ZC_ClientProjectValueH_S with
+{
+  @UI.facet: [ {
+    id: 'Transport', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Transport', 
+    position: 1 , 
+    hidden: #(HideTransport)
+  }, 
+  {
+    id: 'ZI_ClientProjectValueH', 
+    purpose: #STANDARD, 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Client project value help of repository', 
+    position: 2 , 
+    targetElement: '_ClientProjectValueH'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  SingletonID;
+  
+  @UI.hidden: true
+  HideTransport;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    importance: #HIGH
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'SelectCustomizingTransptReq', 
+    label: 'Select Transport'
+  } ]
+  TransportRequestID;
+}

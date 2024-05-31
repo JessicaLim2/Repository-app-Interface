@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table maintenance for security of repository app",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_SECURITYVALUEHELPOF_O4",
+    "serviceName": "ZUI_SECURITYVALUEHELPOF_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "SecurityValueHelAll",
+    "name": "Security value help of repository app",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "SecurityValueHelAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "SecurityValueHelpOf",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_MappingValueHelpOfR_S alias MappingValueHelpAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _MappingValueHelpOfR { create; with draft; }
+}
+
+define behavior for ZC_MappingValueHelpOfR alias MappingValueHelpOfR
+
+{
+  use update;
+  use delete;
+
+  use association _MappingValueHelpAll { with draft; }
+}

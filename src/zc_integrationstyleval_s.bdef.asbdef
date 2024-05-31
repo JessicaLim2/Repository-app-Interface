@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_IntegrationStyleVal_S alias IntegrationStyleAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _IntegrationStyleVal { create; with draft; }
+}
+
+define behavior for ZC_IntegrationStyleVal alias IntegrationStyleVal
+
+{
+  use update;
+  use delete;
+
+  use association _IntegrationStyleAll { with draft; }
+}

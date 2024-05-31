@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table Maintenance for Consultant VH of repository",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_CONSULTANTVALUEHELP_O4",
+    "serviceName": "ZUI_CONSULTANTVALUEHELP_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "ConsultantValueHAll",
+    "name": "Consultant value help of repository app",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "ConsultantValueHAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "ConsultantValueHelp",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

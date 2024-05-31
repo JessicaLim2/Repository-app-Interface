@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table maintenance for integration pattern of repos",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_INTEGRATIONPATTERNV_O4",
+    "serviceName": "ZUI_INTEGRATIONPATTERNV_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "IntegrationPatteAll",
+    "name": "Integration pattern value help of reposi",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "IntegrationPatteAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "IntegrationPatternV",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

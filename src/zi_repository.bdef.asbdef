@@ -1,0 +1,58 @@
+managed implementation in class zbp_i_repository unique;
+//strict ( 1 );
+with draft;
+
+define behavior for ZI_REPOSITORY //alias <alias_name>
+persistent table zdt_repository//zdt_interface
+draft table zdt_reposi_draft
+lock master total etag locallastchangedat
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  field ( readonly, numbering:managed ) uuid;
+  //  field ( mandatory : create, readonly:update ) dev_type;
+
+  //MUST HV WHN USE VIRTUAL ELEMENT
+  field ( readonly ) UICT_INTEG_HIDE;
+  field ( readonly ) UICT_FIORI_HIDE;
+  field ( readonly ) UICT_FORM_HIDE;
+  field ( readonly ) UICT_REPORT_HIDE;
+  field ( readonly ) UICT_ENHANCEMENT_HIDE;
+  field ( readonly ) UICT_CONVERSION_HIDE;
+  field ( readonly ) UICT_WORKFLOW_HIDE;
+  //field (  ) project;
+//  field ( features : instance ) dev_type;
+
+    // action (features:instance) hideDevType result[1] $self;
+    // field (features:instance) module_name;
+////  action draftToActive result [1] entity ZI_REPOSITORY;
+
+//  determination hideDevType on modify { field dev_type; }
+
+//  validation validateDevType on save { field dev_type; create; update; }
+  validation validateClientProj on save { field client_prj; create; update; }
+  validation validateProject on save { field project; create; update; }
+  validation validateIntDomain on save { field integration_dom; create; update; }
+  validation validateIntStyle on save { field integration_sty; create; update; }
+  validation validateIntPattern on save { field integration_pat; create; update; }
+  validation validateCommunication on save { field communication; create; update; }
+  validation validateTechnology on save { field Technology; create; update; }
+  validation validateSenderFormat on save { field sender_format; create; update; }
+  validation validateReceiverFormat on save { field receiver_format; create; update; }
+  validation validateMapping on save { field mapping; create; update; }
+  validation validateSenderSec on save { field sender_sec; create; update; }
+  validation validateReceiverSec on save { field receiver_sec; create; update; }
+  validation validateSenderType on save { field sender_type; create; update; }
+  validation validateReceiverType on save { field receiver_type; create; update; }
+  validation validateModuleName on save { field module_name; create; update; }
+  validation validateDeveloper on save { field developer; create; update; }
+  validation validateFunctional on save { field functional; create; update; }
+
+ //// create;
+ //// update;
+ //// delete;
+
+  draft action Edit;
+  draft action Activate;
+
+}

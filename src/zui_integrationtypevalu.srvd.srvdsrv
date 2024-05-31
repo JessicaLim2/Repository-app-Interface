@@ -1,0 +1,4 @@
+define service ZUI_INTEGRATIONTYPEVALU {
+  expose ZC_INTEGRATIONTYPEVALU_S as IntegrationTypeVAll;
+  expose ZC_INTEGRATIONTYPEVALU as IntegrationTypeValu;
+}

@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_PriorityValueHelpOf {
+  grant select on ZC_PriorityValueHelpOf
+  where INHERITING CONDITIONS FROM ENTITY ZI_PriorityValueHelpOf;
+}

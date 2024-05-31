@@ -1,0 +1,4 @@
+define service ZUI_DEVELOPMENTTYPEVALU {
+  expose ZC_DEVELOPMENTTYPEVALU_S as DevelopmentTypeVAll;
+  expose ZC_DEVELOPMENTTYPEVALU as DevelopmentTypeValu;
+}

@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_ClientProjectValueH {
+  grant select on ZC_ClientProjectValueH
+  where INHERITING CONDITIONS FROM ENTITY ZI_ClientProjectValueH;
+}

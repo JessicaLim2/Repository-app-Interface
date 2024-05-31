@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_IntegrationStyleVal {
+  grant select on ZC_IntegrationStyleVal
+  where INHERITING CONDITIONS FROM ENTITY ZI_IntegrationStyleVal;
+}

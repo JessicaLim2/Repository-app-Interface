@@ -1,0 +1,43 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationDomaiAll'
+  }
+}
+annotate view ZC_IntegrationDomainVa_S with
+{
+  @UI.facet: [ {
+    id: 'Transport', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Transport', 
+    position: 1 , 
+    hidden: #(HideTransport)
+  }, 
+  {
+    id: 'ZI_IntegrationDomainVa', 
+    purpose: #STANDARD, 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Integration domain value help of reposit', 
+    position: 2 , 
+    targetElement: '_IntegrationDomainVa'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  SingletonID;
+  
+  @UI.hidden: true
+  HideTransport;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    importance: #HIGH
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'SelectCustomizingTransptReq', 
+    label: 'Select Transport'
+  } ]
+  TransportRequestID;
+}

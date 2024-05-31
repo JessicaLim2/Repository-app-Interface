@@ -1,0 +1,9 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Priority VH of repository app'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.resultSet.sizeCategory: #XS
+define view entity ZI_PRIORITY_VH as select from zdt_priority
+{
+    key priority
+}

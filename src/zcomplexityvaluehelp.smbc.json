@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table Maintenance for Complexity VH of repository",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_COMPLEXITYVALUEHELP_O4",
+    "serviceName": "ZUI_COMPLEXITYVALUEHELP_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "ComplexityValueHAll",
+    "name": "Complexity value help of repository app",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "ComplexityValueHAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "ComplexityValueHelp",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

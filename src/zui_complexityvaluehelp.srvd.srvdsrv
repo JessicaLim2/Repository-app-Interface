@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_ComplexityValueHelp_S'
+define service ZUI_COMPLEXITYVALUEHELP {
+  expose ZC_COMPLEXITYVALUEHELP_S as ComplexityValueHAll;
+  expose ZC_COMPLEXITYVALUEHELP as ComplexityValueHelp;
+}

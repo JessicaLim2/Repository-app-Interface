@@ -1,0 +1,4 @@
+define service ZUI_SYSTEMVALUEHELPOFRE {
+  expose ZC_SYSTEMVALUEHELPOFRE_S as SystemValueHelpOAll;
+  expose ZC_SYSTEMVALUEHELPOFRE as SystemValueHelpOfRe;
+}

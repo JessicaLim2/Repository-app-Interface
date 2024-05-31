@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition of repository app'
+define service ZSD_REPOSITORY {
+  expose ZC_REPOSITORY;
+}

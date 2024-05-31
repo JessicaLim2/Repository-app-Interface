@@ -1,0 +1,43 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DevelopmentTypeVAll'
+  }
+}
+annotate view ZC_DevelopmentTypeValu_S with
+{
+  @UI.facet: [ {
+    id: 'Transport', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Transport', 
+    position: 1 , 
+    hidden: #(HideTransport)
+  }, 
+  {
+    id: 'ZI_DevelopmentTypeValu', 
+    purpose: #STANDARD, 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Development type value help of repositor', 
+    position: 2 , 
+    targetElement: '_DevelopmentTypeValu'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  SingletonID;
+  
+  @UI.hidden: true
+  HideTransport;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    importance: #HIGH
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'SelectCustomizingTransptReq', 
+    label: 'Select Transport'
+  } ]
+  TransportRequestID;
+}

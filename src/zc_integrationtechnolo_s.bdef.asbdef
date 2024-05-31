@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_IntegrationTechnolo_S alias IntegrationTechnAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _IntegrationTechnolo { create; with draft; }
+}
+
+define behavior for ZC_IntegrationTechnolo alias IntegrationTechnolo
+
+{
+  use update;
+  use delete;
+
+  use association _IntegrationTechnAll { with draft; }
+}

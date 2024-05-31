@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationTechnolo', 
+    typeNamePlural: 'IntegrationTechnolos', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration technology value help of rep', 
+      value: 'Technology'
+    }
+  }
+}
+annotate view ZC_IntegrationTechnolo with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Technology'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Technology'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_IntegrationTechnolo', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Integration technology value help of rep', 
+    position: 1 
+  } ]
+  Technology;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

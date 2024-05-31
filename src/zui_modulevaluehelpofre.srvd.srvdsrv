@@ -1,0 +1,4 @@
+define service ZUI_MODULEVALUEHELPOFRE {
+  expose ZC_MODULEVALUEHELPOFRE_S as ModuleValueHelpOAll;
+  expose ZC_MODULEVALUEHELPOFRE as ModuleValueHelpOfRe;
+}

@@ -1,0 +1,4 @@
+define service ZUI_COMMUNICATIONVALUEH {
+  expose ZC_COMMUNICATIONVALUEH_S as CommunicationValAll;
+  expose ZC_COMMUNICATIONVALUEH as CommunicationValueH;
+}

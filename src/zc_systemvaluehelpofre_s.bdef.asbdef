@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_SystemValueHelpOfRe_S alias SystemValueHelpOAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _SystemValueHelpOfRe { create; with draft; }
+}
+
+define behavior for ZC_SystemValueHelpOfRe alias SystemValueHelpOfRe
+
+{
+  use update;
+  use delete;
+
+  use association _SystemValueHelpOAll { with draft; }
+}

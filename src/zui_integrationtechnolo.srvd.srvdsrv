@@ -1,0 +1,4 @@
+define service ZUI_INTEGRATIONTECHNOLO {
+  expose ZC_INTEGRATIONTECHNOLO_S as IntegrationTechnAll;
+  expose ZC_INTEGRATIONTECHNOLO as IntegrationTechnolo;
+}

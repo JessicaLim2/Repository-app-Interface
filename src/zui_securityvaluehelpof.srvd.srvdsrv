@@ -1,0 +1,4 @@
+define service ZUI_SECURITYVALUEHELPOF {
+  expose ZC_SECURITYVALUEHELPOF_S as SecurityValueHelAll;
+  expose ZC_SECURITYVALUEHELPOF as SecurityValueHelpOf;
+}

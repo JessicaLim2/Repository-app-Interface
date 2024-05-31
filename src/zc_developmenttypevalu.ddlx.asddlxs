@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DevelopmentTypeValu', 
+    typeNamePlural: 'DevelopmentTypeValus', 
+    title: {
+      type: #STANDARD, 
+      label: 'Development type value help of repositor', 
+      value: 'DevType'
+    }
+  }
+}
+annotate view ZC_DevelopmentTypeValu with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'DevType'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'DevType'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_DevelopmentTypeValu', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Development type value help of repositor', 
+    position: 1 
+  } ]
+  DevType;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

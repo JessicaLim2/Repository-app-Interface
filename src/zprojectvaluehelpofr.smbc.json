@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain Project value help of repository app",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_PROJECTVALUEHELPOFR_O4",
+    "serviceName": "ZUI_PROJECTVALUEHELPOFR_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "ProjectValueHelpAll",
+    "name": "Project value help of repository app",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "ProjectValueHelpAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "ProjectValueHelpOfR",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

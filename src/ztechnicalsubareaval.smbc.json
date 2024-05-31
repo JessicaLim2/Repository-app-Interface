@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table Maintenance of Technical subarea VH",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_TECHNICALSUBAREAVAL_O4",
+    "serviceName": "ZUI_TECHNICALSUBAREAVAL_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "TechnicalSubareaAll",
+    "name": "Technical subarea value help of reposito",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "TechnicalSubareaAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "TechnicalSubareaVal",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

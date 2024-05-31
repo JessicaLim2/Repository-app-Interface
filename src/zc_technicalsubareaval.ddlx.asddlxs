@@ -1,0 +1,41 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'TechnicalSubareaVal', 
+    typeNamePlural: 'TechnicalSubareaVals', 
+    title: {
+      type: #STANDARD, 
+      label: 'Technical subarea value help of reposito', 
+      value: 'TechArea'
+    }
+  }
+}
+annotate view ZC_TechnicalSubareaVal with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'TechArea'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'TechArea'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_TechnicalSubareaVal', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Technical subarea value help of reposito', 
+    position: 1 
+  } ]
+  TechArea;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'TechSubarea'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'TechSubarea'
+  } ]
+  TechSubarea;
+}

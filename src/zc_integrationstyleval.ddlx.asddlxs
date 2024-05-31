@@ -1,0 +1,46 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationStyleVal', 
+    typeNamePlural: 'IntegrationStyleVals', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration style value help of reposito', 
+      value: 'IntegrationSty'
+    }
+  }
+}
+annotate view ZC_IntegrationStyleVal with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'IntegrationSty'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'IntegrationSty'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_IntegrationStyleVal', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Integration style value help of reposito', 
+    position: 1 
+  } ]
+  IntegrationSty;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'StyleDesc'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'StyleDesc'
+  } ]
+  StyleDesc;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  LastChangedAt;
+}

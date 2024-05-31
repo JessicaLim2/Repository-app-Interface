@@ -1,0 +1,31 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'PriorityValueHelpOf', 
+    typeNamePlural: 'PriorityValueHelpOfs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Priority value help of repository app', 
+      value: 'Priority'
+    }
+  }
+}
+annotate view ZC_PriorityValueHelpOf with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Priority'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Priority'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_PriorityValueHelpOf', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Priority value help of repository app', 
+    position: 1 
+  } ]
+  Priority;
+}

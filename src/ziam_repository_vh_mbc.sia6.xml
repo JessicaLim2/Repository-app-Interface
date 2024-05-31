@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZIAM_REPOSITORY_VH_MBC</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>IAM - Table maintenance of repository VH</DESCRIPTION>
+     <RESPONSIBLE>CB9980000030</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>H01</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>Z_JL</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+    <APP_TYPE>MBC</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_CLIENTPROJECTVALUEH_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>7B4897B1F58CEC6A7CFD17E469D311</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Client project value help of repository</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_COMMUNICATIONVALUEH_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>7AD650C037298CAD6CA07AE54EFFB5</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Communication value help of repository a - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_COMPLEXITYVALUEHELP_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>8A637328693FDE6EB4D6A0C44084B3</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Complexity value help of repository app</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_CONSULTANTVALUEHELP_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>0BA9B594CEADBDE61A75510568A2C2</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Consultant value help of repository app</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_DATAFORMATVALUEHELP_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>D9865F707F0A886F43E8E82C35F848</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Data format value help of repository app - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_DEVELOPMENTTYPEVALU_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>AFD32A7C54303F8D4B841A88AD7BE1</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Development type value help of repositor - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_INTEGRATIONDOMAINVA_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>96D3BA0755DAF6B2D9BFC37EB064E4</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Integration domain value help of reposit - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_INTEGRATIONPATTERNV_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>CAAD66BB9908F7BDA05CA896192155</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Integration pattern value help of reposi - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_INTEGRATIONSTYLEVAL_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>69F15C90CF24FF09B638F77A837E7A</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Integration style value help of reposito - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_INTEGRATIONTECHNOLO_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>75E9F76185DD5D621D11C0789BFBFA</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Integration technology value help of rep - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_INTEGRATIONTYPEVALU_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>C04AEAFBC538297E4B8E3CAB9DBF54</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Integration type value help of repositor - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_MAPPINGVALUEHELPOFR_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>9605A942E37A22A98EFA761C4D4324</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Mapping value help of repository app - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_MODULEVALUEHELPOFRE_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>7D5270A32A3FD94F2F49947C37FB69</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Module value help of repository app - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_PRIORITYVALUEHELPOF_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>15091996A20101C9599D3BE2F9FF23</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Priority value help of repository app</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_PROJECTVALUEHELPOFR_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>1F8C50687868D7B7C1D84B72019800</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Project value help of repository app</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_SECURITYVALUEHELPOF_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>22CE9C10B116AA3A28537A9EA57942</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Security value help of repository app - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_SYSTEMVALUEHELPOFRE_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>62FEB535C994A2A1D0A2633D8F1CEB</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>System value help of repository app - Maintain</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_TECHNICALSUBAREAVAL_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZIAM_REPOSITORY_VH_MBC</APP_ID>
+      <SRVC_NAME>301F701788CB2F9570133F6F88831E</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Technical subarea value help of reposito</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+      <STATUS>U</STATUS>
+      <TEXT>Table Access by Generic Standard Tools</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>HpPQ5qS7Hu6utIHO6lRR9w==</UUID>
+        <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <TEXT>Table Access by Generic Standard Tools</TEXT>
+        <STATUS>U</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUE>Display,Change</VALUE>
+          <VALUES>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lRx9w==</UUID>
+            <LOW_VALUE>03</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lSR9w==</UUID>
+            <LOW_VALUE>02</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>U</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>TABLE</FIELD>
+          <VALUE>ZI_TECHNICALSUBAREAVAL,ZI_CONSULTANTVALUEHELP,ZI_COMPLEXITYVALUEHELP,...</VALUE>
+          <VALUES>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lbR9w==</UUID>
+            <LOW_VALUE>ZI_TECHNICALSUBAREAVAL</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lax9w==</UUID>
+            <LOW_VALUE>ZI_CONSULTANTVALUEHELP</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6laR9w==</UUID>
+            <LOW_VALUE>ZI_COMPLEXITYVALUEHELP</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lZx9w==</UUID>
+            <LOW_VALUE>ZI_PRIORITYVALUEHELPOF</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lZR9w==</UUID>
+            <LOW_VALUE>ZI_COMMUNICATIONVALUEH</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lYx9w==</UUID>
+            <LOW_VALUE>ZI_DATAFORMATVALUEHELP</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lYR9w==</UUID>
+            <LOW_VALUE>ZI_PROJECTVALUEHELPOFR</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lXx9w==</UUID>
+            <LOW_VALUE>ZI_MODULEVALUEHELPOFRE</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lXR9w==</UUID>
+            <LOW_VALUE>ZI_INTEGRATIONTYPEVALU</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lWx9w==</UUID>
+            <LOW_VALUE>ZI_DEVELOPMENTTYPEVALU</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lWR9w==</UUID>
+            <LOW_VALUE>ZI_CLIENTPROJECTVALUEH</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lVx9w==</UUID>
+            <LOW_VALUE>ZI_SECURITYVALUEHELPOF</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lVR9w==</UUID>
+            <LOW_VALUE>ZI_INTEGRATIONSTYLEVAL</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lUx9w==</UUID>
+            <LOW_VALUE>ZI_INTEGRATIONPATTERNV</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lUR9w==</UUID>
+            <LOW_VALUE>ZI_INTEGRATIONDOMAINVA</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lTx9w==</UUID>
+            <LOW_VALUE>ZI_INTEGRATIONTECHNOLO</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lTR9w==</UUID>
+            <LOW_VALUE>ZI_MAPPINGVALUEHELPOFR</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>HpPQ5qS7Hu6utIHO6lSx9w==</UUID>
+            <LOW_VALUE>ZI_SYSTEMVALUEHELPOFRE</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Table Name</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

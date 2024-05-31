@@ -1,0 +1,4 @@
+define service ZUI_INTEGRATIONDOMAINVA {
+  expose ZC_INTEGRATIONDOMAINVA_S as IntegrationDomaiAll;
+  expose ZC_INTEGRATIONDOMAINVA as IntegrationDomainVa;
+}

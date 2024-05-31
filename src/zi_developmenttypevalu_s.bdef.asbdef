@@ -1,0 +1,63 @@
+managed with additional save implementation in class ZBP_I_DEVELOPMENTTYPEVALU_S unique;
+strict;
+with draft;
+
+define behavior for ZI_DevelopmentTypeValu_S alias DevelopmentTypeVAll
+draft table ZDT_DEVTYPE__D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _DevelopmentTypeValu { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_DevelopmentTypeValu alias DevelopmentTypeValu
+persistent table ZDT_DEVTYPE_REP
+draft table ZDT_DEVTYPE_RE_D
+etag master LocalLastChangedAt
+lock dependent by _DevelopmentTypeVAll
+authorization dependent by _DevelopmentTypeVAll
+
+{
+  field ( mandatory : create )
+   DevType;
+
+  field ( readonly )
+   SingletonID,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   DevType;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_DEVTYPE_REP
+  {
+    DevType = DEV_TYPE;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _DevelopmentTypeVAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

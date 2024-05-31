@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Development Type value help of repository app",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_DEVELOPMENTTYPEVALU_O4",
+    "serviceName": "ZUI_DEVELOPMENTTYPEVALU_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "DevelopmentTypeVAll",
+    "name": "Development type value help of repositor",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "DevelopmentTypeVAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "DevelopmentTypeValu",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_MappingValueHelpOfR {
+  grant select on ZC_MappingValueHelpOfR
+  where INHERITING CONDITIONS FROM ENTITY ZI_MappingValueHelpOfR;
+}

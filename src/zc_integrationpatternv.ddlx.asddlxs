@@ -1,0 +1,66 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationPatternV', 
+    typeNamePlural: 'IntegrationPatternVs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration pattern value help of reposi', 
+      value: 'IntegrationSty'
+    }
+  }
+}
+annotate view ZC_IntegrationPatternV with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'IntegrationSty'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'IntegrationSty'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_IntegrationPatternV', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Integration pattern value help of reposi', 
+    position: 1 
+  } ]
+  IntegrationSty;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'IntegrationPat'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'IntegrationPat'
+  } ]
+  IntegrationPat;
+  
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'PatternDesc'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'PatternDesc'
+  } ]
+  PatternDesc;
+  
+  @UI.identification: [ {
+    position: 4 , 
+    label: 'PatternExample'
+  } ]
+  @UI.lineItem: [ {
+    position: 4 , 
+    label: 'PatternExample'
+  } ]
+  PatternExample;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  LastChangedAt;
+}

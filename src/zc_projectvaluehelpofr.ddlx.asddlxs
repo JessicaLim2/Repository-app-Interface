@@ -1,0 +1,44 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ProjectValueHelpOfR', 
+    typeNamePlural: 'ProjectValueHelpOfRs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Project value help of repository app', 
+      value: 'ClientPrj'
+    }
+  }
+}
+annotate view ZC_ProjectValueHelpOfR with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'ClientPrj'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'ClientPrj'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_ProjectValueHelpOfR', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Project value help of repository app', 
+    position: 1 
+  } ]
+  ClientPrj;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Project;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  LastChangedAt;
+}

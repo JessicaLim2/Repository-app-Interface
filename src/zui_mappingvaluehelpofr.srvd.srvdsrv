@@ -1,0 +1,4 @@
+define service ZUI_MAPPINGVALUEHELPOFR {
+  expose ZC_MAPPINGVALUEHELPOFR_S as MappingValueHelpAll;
+  expose ZC_MAPPINGVALUEHELPOFR as MappingValueHelpOfR;
+}

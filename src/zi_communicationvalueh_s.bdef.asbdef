@@ -1,0 +1,63 @@
+managed with additional save implementation in class ZBP_I_COMMUNICATIONVALUEH_S unique;
+strict;
+with draft;
+
+define behavior for ZI_CommunicationValueH_S alias CommunicationValAll
+draft table ZDT_COMM_REP_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _CommunicationValueH { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_CommunicationValueH alias CommunicationValueH
+persistent table ZDT_COMM_REP
+draft table ZDT_COMM_REP_D
+etag master LocalLastChangedAt
+lock dependent by _CommunicationValAll
+authorization dependent by _CommunicationValAll
+
+{
+  field ( mandatory : create )
+   Communication;
+
+  field ( readonly )
+   SingletonID,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Communication;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_COMM_REP
+  {
+    Communication = COMMUNICATION;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _CommunicationValAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

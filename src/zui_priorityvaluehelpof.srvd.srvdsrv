@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_PriorityValueHelpOf_S'
+define service ZUI_PRIORITYVALUEHELPOF {
+  expose ZC_PRIORITYVALUEHELPOF_S as PriorityValueHelAll;
+  expose ZC_PRIORITYVALUEHELPOF as PriorityValueHelpOf;
+}

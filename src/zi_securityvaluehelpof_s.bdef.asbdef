@@ -1,0 +1,63 @@
+managed with additional save implementation in class ZBP_I_SECURITYVALUEHELPOF_S unique;
+strict;
+with draft;
+
+define behavior for ZI_SecurityValueHelpOf_S alias SecurityValueHelAll
+draft table ZDT_SECURITY_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _SecurityValueHelpOf { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_SecurityValueHelpOf alias SecurityValueHelpOf
+persistent table ZDT_SECURITY_REP
+draft table ZDT_SECURITY_R_D
+etag master LocalLastChangedAt
+lock dependent by _SecurityValueHelAll
+authorization dependent by _SecurityValueHelAll
+
+{
+  field ( mandatory : create )
+   Security;
+
+  field ( readonly )
+   SingletonID,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Security;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_SECURITY_REP
+  {
+    Security = SECURITY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _SecurityValueHelAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

@@ -1,0 +1,4 @@
+define service ZUI_INTEGRATIONPATTERNV {
+  expose ZC_INTEGRATIONPATTERNV_S as IntegrationPatteAll;
+  expose ZC_INTEGRATIONPATTERNV as IntegrationPatternV;
+}

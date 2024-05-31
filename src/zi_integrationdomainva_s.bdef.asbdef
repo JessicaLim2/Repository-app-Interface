@@ -1,0 +1,63 @@
+managed with additional save implementation in class ZBP_I_INTEGRATIONDOMAINVA_S unique;
+strict;
+with draft;
+
+define behavior for ZI_IntegrationDomainVa_S alias IntegrationDomaiAll
+draft table ZDT_INTEGDOM_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _IntegrationDomainVa { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_IntegrationDomainVa alias IntegrationDomainVa
+persistent table ZDT_INTEGDOM_REP
+draft table ZDT_INTEGDOM_R_D
+etag master LocalLastChangedAt
+lock dependent by _IntegrationDomaiAll
+authorization dependent by _IntegrationDomaiAll
+
+{
+  field ( mandatory : create )
+   IntegrationDom;
+
+  field ( readonly )
+   SingletonID,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   IntegrationDom;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_INTEGDOM_REP
+  {
+    IntegrationDom = INTEGRATION_DOM;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _IntegrationDomaiAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_ComplexityValueHelp {
+  grant select on ZC_ComplexityValueHelp
+  where INHERITING CONDITIONS FROM ENTITY ZI_ComplexityValueHelp;
+}

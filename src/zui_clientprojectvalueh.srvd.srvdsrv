@@ -1,0 +1,4 @@
+define service ZUI_CLIENTPROJECTVALUEH {
+  expose ZC_CLIENTPROJECTVALUEH_S as ClientProjectValAll;
+  expose ZC_CLIENTPROJECTVALUEH as ClientProjectValueH;
+}

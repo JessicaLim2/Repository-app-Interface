@@ -1,0 +1,4 @@
+define service ZUI_INTEGRATIONSTYLEVAL {
+  expose ZC_INTEGRATIONSTYLEVAL_S as IntegrationStyleAll;
+  expose ZC_INTEGRATIONSTYLEVAL as IntegrationStyleVal;
+}

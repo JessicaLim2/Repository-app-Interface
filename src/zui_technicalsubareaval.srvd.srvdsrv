@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_TechnicalSubareaVal_S'
+define service ZUI_TECHNICALSUBAREAVAL {
+  expose ZC_TECHNICALSUBAREAVAL_S as TechnicalSubareaAll;
+  expose ZC_TECHNICALSUBAREAVAL as TechnicalSubareaVal;
+}

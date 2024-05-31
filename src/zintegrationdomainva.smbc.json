@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table maintenance for integration domain of reposi",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_INTEGRATIONDOMAINVA_O4",
+    "serviceName": "ZUI_INTEGRATIONDOMAINVA_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "IntegrationDomaiAll",
+    "name": "Integration domain value help of reposit",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "IntegrationDomaiAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "IntegrationDomainVa",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

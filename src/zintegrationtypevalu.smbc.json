@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Table maintenance for integration type of reposito",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_INTEGRATIONTYPEVALU_O4",
+    "serviceName": "ZUI_INTEGRATIONTYPEVALU_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "IntegrationTypeVAll",
+    "name": "Integration type value help of repositor",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "IntegrationTypeVAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "IntegrationTypeValu",
+        "tableType": "gridTable",
+        "rowCountMode": "auto",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

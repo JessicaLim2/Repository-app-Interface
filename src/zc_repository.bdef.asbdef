@@ -1,0 +1,14 @@
+projection;
+//strict ( 1 );
+use draft;
+
+define behavior for ZC_REPOSITORY //alias <alias_name>
+{
+////  use create;
+////  use update;
+////  use delete;
+
+////  use action draftToActive result entity ZC_REPOSITORY;
+//  use action hideDevType;
+
+}

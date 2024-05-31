@@ -1,0 +1,66 @@
+managed with additional save implementation in class ZBP_I_PRIORITYVALUEHELPOF_S unique;
+strict;
+with draft;
+
+define behavior for ZI_PriorityValueHelpOf_S alias PriorityValueHelAll
+draft table ZDT_PRIORIT_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   HideTransport,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _PriorityValueHelpOf { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_PriorityValueHelpOf alias PriorityValueHelpOf
+persistent table ZDT_PRIORITY
+draft table ZDT_PRIORITY_D
+lock dependent by _PriorityValueHelAll
+authorization dependent by _PriorityValueHelAll
+
+{
+  field ( mandatory : create )
+   Priority;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Priority;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_PRIORITY
+  {
+    Priority = PRIORITY;
+  }
+
+  association _PriorityValueHelAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

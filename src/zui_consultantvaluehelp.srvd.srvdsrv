@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_ConsultantValueHelp_S'
+define service ZUI_CONSULTANTVALUEHELP {
+  expose ZC_CONSULTANTVALUEHELP_S as ConsultantValueHAll;
+  expose ZC_CONSULTANTVALUEHELP as ConsultantValueHelp;
+}

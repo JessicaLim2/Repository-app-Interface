@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'CommunicationValueH', 
+    typeNamePlural: 'CommunicationValueHs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Communication value help of repository a', 
+      value: 'Communication'
+    }
+  }
+}
+annotate view ZC_CommunicationValueH with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Communication'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Communication'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_CommunicationValueH', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Communication value help of repository a', 
+    position: 1 
+  } ]
+  Communication;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

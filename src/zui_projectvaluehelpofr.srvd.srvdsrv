@@ -1,0 +1,4 @@
+define service ZUI_PROJECTVALUEHELPOFR {
+  expose ZC_PROJECTVALUEHELPOFR_S as ProjectValueHelpAll;
+  expose ZC_PROJECTVALUEHELPOFR as ProjectValueHelpOfR;
+}

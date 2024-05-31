@@ -1,0 +1,31 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ConsultantValueHelp', 
+    typeNamePlural: 'ConsultantValueHelps', 
+    title: {
+      type: #STANDARD, 
+      label: 'Consultant value help of repository app', 
+      value: 'Consultant'
+    }
+  }
+}
+annotate view ZC_ConsultantValueHelp with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Consultant'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Consultant'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_ConsultantValueHelp', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Consultant value help of repository app', 
+    position: 1 
+  } ]
+  Consultant;
+}

@@ -1,0 +1,66 @@
+managed with additional save implementation in class ZBP_I_COMPLEXITYVALUEHELP_S unique;
+strict;
+with draft;
+
+define behavior for ZI_ComplexityValueHelp_S alias ComplexityValueHAll
+draft table ZDT_COMPLEX_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   HideTransport,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _ComplexityValueHelp { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_ComplexityValueHelp alias ComplexityValueHelp
+persistent table ZDT_COMPLEXITY
+draft table ZDT_COMPLEXIT_D
+lock dependent by _ComplexityValueHAll
+authorization dependent by _ComplexityValueHAll
+
+{
+  field ( mandatory : create )
+   Complexity;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Complexity;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZDT_COMPLEXITY
+  {
+    Complexity = COMPLEXITY;
+  }
+
+  association _ComplexityValueHAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

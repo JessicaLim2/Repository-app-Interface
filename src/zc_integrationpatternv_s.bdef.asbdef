@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_IntegrationPatternV_S alias IntegrationPatteAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _IntegrationPatternV { create; with draft; }
+}
+
+define behavior for ZC_IntegrationPatternV alias IntegrationPatternV
+
+{
+  use update;
+  use delete;
+
+  use association _IntegrationPatteAll { with draft; }
+}

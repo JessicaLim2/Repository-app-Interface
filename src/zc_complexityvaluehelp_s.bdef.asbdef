@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_ComplexityValueHelp_S alias ComplexityValueHAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _ComplexityValueHelp { create; with draft; }
+}
+
+define behavior for ZC_ComplexityValueHelp alias ComplexityValueHelp
+
+{
+  use update;
+  use delete;
+
+  use association _ComplexityValueHAll { with draft; }
+}

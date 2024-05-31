@@ -1,0 +1,31 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ComplexityValueHelp', 
+    typeNamePlural: 'ComplexityValueHelps', 
+    title: {
+      type: #STANDARD, 
+      label: 'Complexity value help of repository app', 
+      value: 'Complexity'
+    }
+  }
+}
+annotate view ZC_ComplexityValueHelp with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Complexity'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Complexity'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_ComplexityValueHelp', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Complexity value help of repository app', 
+    position: 1 
+  } ]
+  Complexity;
+}

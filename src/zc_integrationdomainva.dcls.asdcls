@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_IntegrationDomainVa {
+  grant select on ZC_IntegrationDomainVa
+  where INHERITING CONDITIONS FROM ENTITY ZI_IntegrationDomainVa;
+}

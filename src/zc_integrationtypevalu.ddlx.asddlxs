@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationTypeValu', 
+    typeNamePlural: 'IntegrationTypeValus', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration type value help of repositor', 
+      value: 'IntegrationType'
+    }
+  }
+}
+annotate view ZC_IntegrationTypeValu with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'IntegrationType'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'IntegrationType'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_IntegrationTypeValu', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Integration type value help of repositor', 
+    position: 1 
+  } ]
+  IntegrationType;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

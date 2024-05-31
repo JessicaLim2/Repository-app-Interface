@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SystemValueHelpOfRe', 
+    typeNamePlural: 'SystemValueHelpOfRes', 
+    title: {
+      type: #STANDARD, 
+      label: 'System value help of repository app', 
+      value: 'Syst'
+    }
+  }
+}
+annotate view ZC_SystemValueHelpOfRe with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Syst'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Syst'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_SystemValueHelpOfRe', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'System value help of repository app', 
+    position: 1 
+  } ]
+  Syst;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

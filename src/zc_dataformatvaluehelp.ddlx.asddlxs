@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DataFormatValueHelp', 
+    typeNamePlural: 'DataFormatValueHelps', 
+    title: {
+      type: #STANDARD, 
+      label: 'Data format value help of repository app', 
+      value: 'DataFormat'
+    }
+  }
+}
+annotate view ZC_DataFormatValueHelp with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'DataFormat'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'DataFormat'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_DataFormatValueHelp', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Data format value help of repository app', 
+    position: 1 
+  } ]
+  DataFormat;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  LastChangedAt;
+}

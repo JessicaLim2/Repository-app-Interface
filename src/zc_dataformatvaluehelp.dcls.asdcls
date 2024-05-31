@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_DataFormatValueHelp {
+  grant select on ZC_DataFormatValueHelp
+  where INHERITING CONDITIONS FROM ENTITY ZI_DataFormatValueHelp;
+}
